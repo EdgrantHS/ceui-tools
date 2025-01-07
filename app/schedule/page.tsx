@@ -1,5 +1,6 @@
 import { ScheduleData, Weekday } from "@/types/schedule";
 import Week from "./Week";
+import scheduleData from "@/data/schedule.json";
 
 import {
   Card,
@@ -10,36 +11,18 @@ import {
 } from "@/components/ui/card";
 
 export default function Schedule() {
-  const schedules: ScheduleData[] = [
-    {
-      id: "1",
-      title: "Jartel 1",
-      weekday: Weekday.Monday,
-      time: { hour: 8, minute: 0 },
-      duration: { hour: 1, minute: 40 },
-    },
-    {
-      id: "1",
-      title: "Jartel 2",
-      weekday: Weekday.Tuesday,
-      time: { hour: 8, minute: 0 },
-      duration: { hour: 1, minute: 40 },
-    },
-    {
-      id: "2",
-      title: "Kemjar 1",
-      weekday: Weekday.Wednesday,
-      time: { hour: 8, minute: 0 },
-      duration: { hour: 2, minute: 30 },
-    },
-    {
-      id: "2",
-      title: "Kemjar 2",
-      weekday: Weekday.Wednesday,
-      time: { hour: 13, minute: 0 },
-      duration: { hour: 2, minute: 30 },
-    },
-  ];
+  const schedules: ScheduleData[] = [];
+  for (const schedule of scheduleData) {
+    schedules.push({
+      id: schedule.id,
+      title: schedule.title,
+      weekday: schedule.weekday as Weekday,
+      time: schedule.time,
+      duration: schedule.duration,
+    });
+  }
+
+  console.log(schedules);
 
   return (
     <Card className="container mx-auto">

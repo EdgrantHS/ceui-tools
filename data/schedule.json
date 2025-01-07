@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "title": "Jartel 1",
+    "weekday": "Monday",
+    "time": { "hour": 8, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 }
+  },
+  {
+    "id": "1",
+    "title": "Jartel 2",
+    "weekday": "Tuesday",
+    "time": { "hour": 8, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 }
+  },
+  {
+    "id": "2",
+    "title": "Kemjar 1",
+    "weekday": "Wednesday",
+    "time": { "hour": 8, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 }
+  },
+  {
+    "id": "2",
+    "title": "Kemjar 2",
+    "weekday": "Wednesday",
+    "time": { "hour": 13, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 }
+  }
+]
