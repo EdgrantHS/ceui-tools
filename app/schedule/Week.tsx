@@ -5,7 +5,7 @@ export default function Week(
   weekday: Weekday,
   scheduleData: ScheduleData[],
   startTime?: ScheduleTime,
-  endTime?: ScheduleTime
+  endTime?: ScheduleTime,
 ) {
   const week = scheduleData.filter((schedule) => schedule.weekday === weekday);
   const scheduleStartHour = startTime?.hour || 0;
@@ -14,21 +14,21 @@ export default function Week(
   const schedule = week.filter(
     (schedule) =>
       schedule.time.hour >= scheduleStartHour &&
-      schedule.time.hour < scheduleEndHour
+      schedule.time.hour < scheduleEndHour,
   );
 
   return (
-    <div className="flex flex-col min-w-40" key={weekday}>
-      <h2 className="border-b border-gray-200 h-12 flex items-center">
+    <div className="flex min-w-40 flex-col" key={weekday}>
+      <h2 className="flex h-12 items-center border-b border-gray-200">
         {weekday}
       </h2>
-      <div className="flex flex-col relative">
+      <div className="relative flex flex-col">
         {Array.from({
           length: scheduleEndHour - scheduleStartHour,
         }).map((_, index) => (
           <div
             key={index}
-            className="border-b border-gray-200 h-12 flex items-center text-xs text-gray-400"
+            className="flex h-12 items-center border-b border-gray-200 text-xs text-gray-400"
           >
             {index + (scheduleStartHour || 0)}:00
           </div>

@@ -38,7 +38,7 @@ export default function Class({
 
   return (
     <div
-      className="absolute z-10 opacity-75 bg-blue-100 border hover:bg-blue-200 hover:opacity-100 transition-all duration-200 ease-in-out border-blue-200 rounded-lg text-xs text-blue-500 p-1 w-full"
+      className="absolute z-10 w-full rounded-lg border border-blue-200 bg-blue-100 p-1 text-xs text-blue-500 opacity-75 transition-all duration-200 ease-in-out hover:bg-blue-200 hover:opacity-100"
       style={{
         height: timeToHeight(classDuration),
         top: timeToTop(startTime?.hour || 0, classTime.hour),

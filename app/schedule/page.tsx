@@ -31,14 +31,14 @@ export default function Schedule() {
         <CardDescription>Weeks Description</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex overflow-x-auto justify-between">
+        <div className="flex justify-between overflow-x-auto">
           {Object.values(Weekday).map((weekday) =>
             Week(
               weekday,
               schedules,
               { hour: 7, minute: 0 },
-              { hour: 20, minute: 0 }
-            )
+              { hour: 20, minute: 0 },
+            ),
           )}
         </div>
       </CardContent>
