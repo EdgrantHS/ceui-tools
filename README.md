@@ -12,11 +12,6 @@ This is a NEXT.js project for picking a schedule for Semester 6 Tekkom UI.
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js (version 14 or later)
-- npm (version 6 or later)
-
 ### Installation
 
 1. Clone the repository:
