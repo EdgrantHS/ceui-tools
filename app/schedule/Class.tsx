@@ -4,6 +4,7 @@ import { ClassMeta, ScheduleTime } from "@/types/schedule";
 import React, { useEffect, useState } from "react";
 
 export default function Class({
+  id,
   title,
   classTime,
   classDuration,
@@ -11,6 +12,7 @@ export default function Class({
   meta,
   changeScheduleCallback,
 }: {
+  id: string;
   title: string;
   classTime: ScheduleTime;
   classDuration: ScheduleTime;
@@ -19,6 +21,7 @@ export default function Class({
   changeScheduleCallback?: (title: string, meta: ClassMeta) => void;
 }) {
   const [active, setActive] = useState("");
+  const [metaState, setMetaState] = useState(meta);
 
   const timeToHeight = (time: ScheduleTime) => {
     const hour = time.hour * 60;
@@ -44,53 +47,106 @@ export default function Class({
 
   const changeScheduleForThisClass = (newMeta: ClassMeta) => {
     if (changeScheduleCallback) {
-      changeScheduleCallback(title, newMeta);
+      // console.log("changing this class");
+      changeScheduleCallback(id, newMeta);
+      setMetaState(newMeta);
     } else {
       console.error("No changeScheduleCallback found");
     }
   };
 
+  const changeScheduleForPartner = (newMeta: ClassMeta) => {
+    if (changeScheduleCallback && meta?.partnerId) {
+      meta.partnerId.forEach((partnerId) => {
+        console.log("changing partner class id: ", partnerId);
+        changeScheduleCallback(partnerId, { ...newMeta }); // Pass a new object reference
+      });
+    }
+  };
+
   const handleClassClick = () => {
-    if (meta?.active) {
-      changeScheduleForThisClass({ active: false, selected: true });
+    if (metaState?.active) {
+      changeScheduleForThisClass({
+        active: false,
+        selected: true,
+        partnerHovered: false,
+      });
+      changeScheduleForPartner({
+        active: false,
+        selected: false,
+        partnerHovered: false,
+      });
     } else {
-      changeScheduleForThisClass({ active: true });
+      changeScheduleForThisClass({
+        active: true,
+        selected: false,
+        partnerHovered: false,
+      });
+      changeScheduleForPartner({
+        active: true,
+        selected: false,
+        partnerHovered: false,
+      });
+    }
+  };
+
+  const handlePartnerHoverLeave = () => {
+    if (metaState?.active) {
+      changeScheduleForThisClass({ active: true, partnerHovered: false });
+      setMetaState({ ...metaState, partnerHovered: false });
+      changeScheduleForPartner({ active: true, partnerHovered: false });
+    }
+  };
+
+  const handlePartnerHoverEnter = () => {
+    if (metaState?.active) {
+      changeScheduleForThisClass({ active: true, partnerHovered: true });
+      setMetaState({ ...metaState, partnerHovered: true });
+      changeScheduleForPartner({ active: true, partnerHovered: true });
     }
   };
 
   useEffect(() => {
-    if (meta) {
-      if (meta.active) {
+    console.log("meta of ", title, " is ", metaState);
+    if (metaState) {
+      if (metaState.active) {
         setActive("active");
       } else {
-        if (meta.selected) {
+        if (metaState.selected) {
           setActive("selected");
         } else {
-          if (meta.partnerHovered) {
-            setActive("partnerHovered");
-          } else {
-            setActive("Not Selected");
-          }
+          setActive("Not Selected");
         }
       }
+      if (metaState.partnerHovered) {
+        console.log("partnerHovered");
+        setActive("partnerHovered");
+      }
     }
+  }, [metaState]);
+
+  useEffect(() => {
+    setMetaState(meta);
   }, [meta]);
 
   return (
     <div
-      className="absolute z-10 w-full rounded-lg border border-blue-200 bg-blue-100 p-1 text-xs text-blue-500 opacity-75 transition-all duration-200 ease-in-out hover:bg-blue-200 hover:opacity-100"
+      className="absolute z-10 w-full cursor-pointer rounded-lg border border-blue-200 p-1 text-xs text-black opacity-75 transition-all duration-200 ease-in-out hover:bg-blue-200 hover:opacity-100"
       style={{
         height: timeToHeight(classDuration),
         top: timeToTop(startTime?.hour || 0, classTime.hour),
         backgroundColor:
-          active === "active"
-            ? "red"
+          active === "partnerHovered"
+            ? "rgba(255, 100, 100, 0.8)"
             : active === "selected"
-              ? "green"
-              : active === "partnerHovered"
-                ? "yellow"
-                : "gray",
+              ? "rgba(100, 255, 100, 0.8)"
+              : active === "active"
+                ? "rgba(100, 100, 255, 0.8)"
+                : "rgba(160, 160, 160, 0.8)",
       }}
+      onClick={handleClassClick}
+      onMouseEnter={handlePartnerHoverEnter}
+      onMouseLeave={handlePartnerHoverLeave}
     >
       <div>{title}</div>
       <div>

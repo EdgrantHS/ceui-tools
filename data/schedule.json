@@ -7,8 +7,9 @@
     "duration": { "hour": 1, "minute": 40 },
     "meta": {
       "active": true,
-      "siblingId": ["Jartel 1 Part 2"],
-      "partnerId": ["Jartel 2 Part 1", "Jartel 2 Part 2"]
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Jartel 2 Part 1"]
     }
   },
   {
@@ -19,8 +20,9 @@
     "duration": { "hour": 1, "minute": 40 },
     "meta": {
       "active": true,
-      "siblingId": ["Jartel 1 Part 1"],
-      "partnerId": ["Jartel 2 Part 1", "Jartel 2 Part 2"]
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Jartel 2 Part 2"]
     }
   },
   {
@@ -31,8 +33,9 @@
     "duration": { "hour": 1, "minute": 40 },
     "meta": {
       "active": true,
-      "siblingId": ["Jartel 2 Part 2"],
-      "partnerId": ["Jartel 1 Part 1", "Jartel 1 Part 2"]
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Jartel 1 Part 1"]
     }
   },
   {
@@ -43,29 +46,34 @@
     "duration": { "hour": 1, "minute": 40 },
     "meta": {
       "active": true,
-      "siblingId": ["Jartel 2 Part 1"],
-      "partnerId": ["Jartel 1 Part 1", "Jartel 1 Part 2"]
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Jartel 1 Part 2"]
     }
   },
   {
     "title": "Kemjar 1",
-    "id": "2",
+    "id": "Kemjar 1",
     "weekday": "Wednesday",
     "time": { "hour": 10, "minute": 0 },
     "duration": { "hour": 2, "minute": 30 },
     "meta": {
       "active": true,
+      "selected": false,
+      "partnerHovered": false,
       "partnerId": ["Kemjar 2"]
     }
   },
   {
     "title": "Kemjar 2",
-    "id": "2",
+    "id": "Kemjar 2",
     "weekday": "Wednesday",
     "time": { "hour": 13, "minute": 0 },
     "duration": { "hour": 2, "minute": 30 },
     "meta": {
       "active": true,
+      "selected": false,
+      "partnerHovered": false,
       "partnerId": ["Kemjar 1"]
     }
   }

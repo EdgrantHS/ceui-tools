@@ -40,6 +40,7 @@ export default function Week({
         {scheduleData.map((schedule, index) => (
           <Class
             key={index}
+            id={schedule.id}
             startTime={startTime}
             classTime={schedule.time}
             classDuration={schedule.duration}
