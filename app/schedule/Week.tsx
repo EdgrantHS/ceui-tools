@@ -37,18 +37,20 @@ export default function Week({
             {index + (startTime?.hour || 0)}:00
           </div>
         ))}
-        {scheduleData.map((schedule, index) => (
-          <Class
-            key={index}
-            id={schedule.id}
-            startTime={startTime}
-            classTime={schedule.time}
-            classDuration={schedule.duration}
-            title={schedule.title}
-            meta={schedule.meta}
-            changeScheduleCallback={changeScheduleCallback}
-          />
-        ))}
+        <div className="absolute bottom-0 left-0 right-0 top-0 w-5/6">
+          {scheduleData.map((schedule, index) => (
+            <Class
+              key={index}
+              id={schedule.id}
+              startTime={startTime}
+              classTime={schedule.time}
+              classDuration={schedule.duration}
+              title={schedule.title}
+              meta={schedule.meta}
+              changeScheduleCallback={changeScheduleCallback}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

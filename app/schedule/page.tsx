@@ -1,6 +1,6 @@
 "use client";
 
-import { ScheduleData, Weekday, ClassMeta } from "@/types/schedule";
+import { Weekday, ClassMeta, ScheduleTime } from "@/types/schedule";
 import Week from "./Week";
 import scheduleData from "@/data/schedule.json";
 
@@ -12,6 +12,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -30,7 +40,7 @@ export default function Schedule() {
 
       return scheduleToReturn;
     });
-  }, [scheduleData]);
+  }, []);
 
   const [schedule, setSchedule] = useState(schedules);
   const [tempSchedule, setTempSchedule] = useState("");
@@ -44,13 +54,19 @@ export default function Schedule() {
     );
   };
 
+  const timeToString = (time: ScheduleTime) => {
+    const hour = time.hour.toString().padStart(2, "0");
+    const minute = time.minute.toString().padStart(2, "0");
+    return `${hour}:${minute}`;
+  };
+
   useEffect(() => {
     // tempschedule populated with default data
     setTempSchedule(JSON.parse(JSON.stringify(schedule)));
   }, [schedule]);
 
   return (
-    <Card className="container mx-auto">
+    <Card className="container mx-auto max-w-screen-xl">
       <CardHeader>
         <CardTitle>Weeks</CardTitle>
         <CardDescription>Weeks Description</CardDescription>
@@ -74,21 +90,34 @@ export default function Schedule() {
           })}
         </div>
       </CardContent>
-      <CardFooter className="flex flex-col gap-16">
+      <CardFooter className="flex flex-col">
         <div className="flex flex-col gap-4">
-          <h1>Your Class</h1>
-          <ul>
-            {schedule
-              .filter((cls) => cls.meta.selected)
-              .map((cls) => (
-                <li key={cls.id}>
-                  {cls.title} - {cls.weekday} - {cls.time.hour}:
-                  {cls.time.minute} - {cls.duration.hour}:{cls.duration.minute}
-                </li>
-              ))}
-          </ul>
+          <Table>
+            <TableCaption>Your Class Right Here</TableCaption>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-[200px]">Name</TableHead>
+                <TableHead>Day</TableHead>
+                <TableHead>Time</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {schedule
+                .filter((cls) => cls.meta.selected)
+                .map((cls) => (
+                  <TableRow key={cls.id}>
+                    <TableCell>{cls.title}</TableCell>
+                    <TableCell>{cls.weekday}</TableCell>
+                    <TableCell>
+                      {timeToString(cls.time)} - {timeToString(cls.duration)}
+                    </TableCell>
+                  </TableRow>
+                ))}
+            </TableBody>
+          </Table>
         </div>
-        <div className="flex justify-between gap-4">
+        <hr className="my-8 w-full" />
+        <div className="mb-8 flex justify-between gap-4">
           <Button
             onClick={() => {
               setSchedule(JSON.parse(JSON.stringify(tempSchedule)));
@@ -100,155 +129,25 @@ export default function Schedule() {
             onClick={() => {
               setTempSchedule(JSON.parse(JSON.stringify(schedule)));
             }}
+            variant="secondary"
           >
             Cancel
           </Button>
         </div>
+        <p className="mb-4">
+          Ini kamu bisa edit/save jadwal kamu dengan copy paste, tapi kalau mau
+          edit copy ke notepad {"->"} edit {"->"} baru paste karena kalau
+          langsung edit disini bisa error.
+        </p>
         <textarea
-          className="w-full rounded-lg border border-gray-200 p-2"
+          className="w-full rounded-lg border border-gray-200 p-2 text-gray-400"
           value={JSON.stringify(tempSchedule, null, 2)}
           onChange={(e) => {
             setTempSchedule(JSON.parse(e.target.value));
           }}
-          rows={20}
+          rows={10}
         />
       </CardFooter>
     </Card>
   );
 }
-
-/*
-[
-  {
-    "title": "Jartel 1",
-    "id": "Jartel 1 Part 1",
-    "weekday": "Monday",
-    "time": {
-      "hour": 10,
-      "minute": 0
-    },
-    "duration": {
-      "hour": 1,
-      "minute": 40
-    },
-    "meta": {
-      "active": true,
-      "siblingId": [
-        "Jartel 1 Part 2"
-      ],
-      "partnerId": [
-        "Jartel 2 Part 1",
-        "Jartel 2 Part 2"
-      ]
-    }
-  },
-  {
-    "title": "Jartel 1",
-    "id": "Jartel 1 Part 2",
-    "weekday": "Thursday",
-    "time": {
-      "hour": 8,
-      "minute": 0
-    },
-    "duration": {
-      "hour": 1,
-      "minute": 40
-    },
-    "meta": {
-      "active": true,
-      "siblingId": [
-        "Jartel 1 Part 1"
-      ],
-      "partnerId": [
-        "Jartel 2 Part 1",
-        "Jartel 2 Part 2"
-      ]
-    }
-  },
-  {
-    "title": "Jartel 2",
-    "id": "Jartel 2 Part 1",
-    "weekday": "Tuesday",
-    "time": {
-      "hour": 8,
-      "minute": 0
-    },
-    "duration": {
-      "hour": 1,
-      "minute": 40
-    },
-    "meta": {
-      "active": true,
-      "siblingId": [
-        "Jartel 2 Part 2"
-      ],
-      "partnerId": [
-        "Jartel 1 Part 1",
-        "Jartel 1 Part 2"
-      ]
-    }
-  },
-  {
-    "title": "Jartel 2",
-    "id": "Jartel 2 Part 2",
-    "weekday": "Friday",
-    "time": {
-      "hour": 8,
-      "minute": 0
-    },
-    "duration": {
-      "hour": 1,
-      "minute": 40
-    },
-    "meta": {
-      "active": true,
-      "siblingId": [
-        "Jartel 2 Part 1"
-      ],
-      "partnerId": [
-        "Jartel 1 Part 1",
-        "Jartel 1 Part 2"
-      ]
-    }
-  },
-  {
-    "title": "Kemjar 1",
-    "id": "2",
-    "weekday": "Wednesday",
-    "time": {
-      "hour": 10,
-      "minute": 0
-    },
-    "duration": {
-      "hour": 2,
-      "minute": 30
-    },
-    "meta": {
-      "active": true,
-      "partnerId": [
-        "Kemjar 2"
-      ]
-    }
-  },
-  {
-    "title": "Kemjar 2",
-    "id": "2",
-    "weekday": "Wednesday",
-    "time": {
-      "hour": 13,
-      "minute": 0
-    },
-    "duration": {
-      "hour": 2,
-      "minute": 30
-    },
-    "meta": {
-      "active": false,
-      "selected": true,
-      "partnerId": [
-        "Kemjar 1"
-      ]
-    }
-  }
-]
- */

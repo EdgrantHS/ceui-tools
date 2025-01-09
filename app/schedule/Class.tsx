@@ -107,7 +107,6 @@ export default function Class({
   };
 
   useEffect(() => {
-    console.log("meta of ", title, " is ", metaState);
     if (metaState) {
       if (metaState.active) {
         setActive("active");
@@ -131,18 +130,18 @@ export default function Class({
 
   return (
     <div
-      className="absolute z-10 w-full cursor-pointer rounded-lg border border-blue-200 p-1 text-xs text-black opacity-75 transition-all duration-200 ease-in-out hover:bg-blue-200 hover:opacity-100"
+      className="absolute z-10 w-full cursor-pointer rounded-lg border-2 border-gray-600 p-1 text-xs text-black opacity-80 transition-all duration-200 ease-in-out hover:opacity-100"
       style={{
         height: timeToHeight(classDuration),
         top: timeToTop(startTime?.hour || 0, classTime.hour),
         backgroundColor:
           active === "partnerHovered"
-            ? "rgba(255, 100, 100, 0.8)"
+            ? "rgba(160, 160, 160, 0.9)"
             : active === "selected"
-              ? "rgba(100, 255, 100, 0.8)"
+              ? "rgba(197, 237, 255, 0.9)"
               : active === "active"
-                ? "rgba(100, 100, 255, 0.8)"
-                : "rgba(160, 160, 160, 0.8)",
+                ? "rgba(240, 240, 240, 0.9)"
+                : "rgba(60, 60, 60, 0.9)",
       }}
       onClick={handleClassClick}
       onMouseEnter={handlePartnerHoverEnter}

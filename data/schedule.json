@@ -1,72 +1,46 @@
 [
   {
-    "title": "Jartel 1",
-    "id": "Jartel 1 Part 1",
-    "weekday": "Monday",
-    "time": { "hour": 8, "minute": 0 },
-    "duration": { "hour": 1, "minute": 40 },
-    "meta": {
-      "active": true,
-      "selected": false,
-      "partnerHovered": false,
-      "partnerId": ["Jartel 2 Part 1"]
-    }
-  },
-  {
-    "title": "Jartel 1",
-    "id": "Jartel 1 Part 2",
-    "weekday": "Thursday",
-    "time": { "hour": 8, "minute": 0 },
-    "duration": { "hour": 1, "minute": 40 },
-    "meta": {
-      "active": true,
-      "selected": false,
-      "partnerHovered": false,
-      "partnerId": ["Jartel 2 Part 2"]
-    }
-  },
-  {
-    "title": "Jartel 2",
-    "id": "Jartel 2 Part 1",
-    "weekday": "Tuesday",
-    "time": { "hour": 8, "minute": 0 },
-    "duration": { "hour": 1, "minute": 40 },
-    "meta": {
-      "active": true,
-      "selected": false,
-      "partnerHovered": false,
-      "partnerId": ["Jartel 1 Part 1"]
-    }
-  },
-  {
-    "title": "Jartel 2",
-    "id": "Jartel 2 Part 2",
+    "title": "Despro 1",
+    "id": "Despro 1",
     "weekday": "Friday",
-    "time": { "hour": 8, "minute": 0 },
+    "time": { "hour": 16, "minute": 0 },
     "duration": { "hour": 1, "minute": 40 },
     "meta": {
       "active": true,
       "selected": false,
       "partnerHovered": false,
-      "partnerId": ["Jartel 1 Part 2"]
+      "partnerId": ["Despro 2"]
     }
   },
   {
-    "title": "Kemjar 1",
-    "id": "Kemjar 1",
+    "title": "Despro 2",
+    "id": "Despro 2",
     "weekday": "Wednesday",
-    "time": { "hour": 10, "minute": 0 },
-    "duration": { "hour": 2, "minute": 30 },
+    "time": { "hour": 16, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
     "meta": {
       "active": true,
       "selected": false,
       "partnerHovered": false,
-      "partnerId": ["Kemjar 2"]
+      "partnerId": ["Despro 1"]
     }
   },
   {
-    "title": "Kemjar 2",
-    "id": "Kemjar 2",
+    "title": "Interaksi Manusia dan Komputer",
+    "id": "Interaksi Manusia dan Komputer",
+    "weekday": "Tuesday",
+    "time": { "hour": 16, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": []
+    }
+  },
+  {
+    "title": "Kecerdasan Buatan 01",
+    "id": "Kecerdasan Buatan 01",
     "weekday": "Wednesday",
     "time": { "hour": 13, "minute": 0 },
     "duration": { "hour": 2, "minute": 30 },
@@ -74,7 +48,163 @@
       "active": true,
       "selected": false,
       "partnerHovered": false,
-      "partnerId": ["Kemjar 1"]
+      "partnerId": ["Kecerdasan Buatan 02"]
+    }
+  },
+  {
+    "title": "Kecerdasan Buatan 02",
+    "id": "Kecerdasan Buatan 02",
+    "weekday": "Tuesday",
+    "time": { "hour": 10, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Kecerdasan Buatan 01"]
+    }
+  },
+  {
+    "title": "Wirausaha Tek Inf 01",
+    "id": "Wirausaha Tek Inf 01",
+    "weekday": "Thursday",
+    "time": { "hour": 16, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Wirausaha Tek Inf 02"]
+    }
+  },
+  {
+    "title": "Wirausaha Tek Inf 02 (Harusnya jam 16)",
+    "id": "Wirausaha Tek Inf 02",
+    "weekday": "Wednesday",
+    "time": { "hour": 17, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Wirausaha Tek Inf 01"]
+    }
+  },
+  {
+    "title": "Komputasi Awan",
+    "id": "Komputasi Awan",
+    "weekday": "Thursday",
+    "time": { "hour": 10, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": []
+    }
+  },
+  {
+    "title": "Pemrosesan Sinyal Multimedia 1 (harusnya jam 10)",
+    "id": "Pemrosesan Sinyal Multimedia 1",
+    "weekday": "Tuesday",
+    "time": { "hour": 11, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Pemrosesan Sinyal Multimedia 2"]
+    }
+  },
+  {
+    "title": "Pemrosesan Sinyal Multimedia 2",
+    "id": "Pemrosesan Sinyal Multimedia 2",
+    "weekday": "Friday",
+    "time": { "hour": 13, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Pemrosesan Sinyal Multimedia 1"]
+    }
+  },
+  {
+    "title": "Profesionalisme-01",
+    "id": "Profesionalisme-01",
+    "weekday": "Friday",
+    "time": { "hour": 8, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Profesionalisme-02"]
+    }
+  },
+  {
+    "title": "Profesionalisme-02",
+    "id": "Profesionalisme-02",
+    "weekday": "Tuesday",
+    "time": { "hour": 8, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Profesionalisme-01"]
+    }
+  },
+  {
+    "title": "Teknologi Blockchain",
+    "id": "Teknologi Blockchain",
+    "weekday": "Thursday",
+    "time": { "hour": 13, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": []
+    }
+  },
+  {
+    "title": "Teknologi Nirkabel",
+    "id": "Teknologi Nirkabel",
+    "weekday": "Wednesday",
+    "time": { "hour": 8, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": []
+    }
+  },
+  {
+    "title": "K3 dan Ris. Ling 01 (1:50 jam? aneh banget)",
+    "id": "K3 dan Ris. Ling 01",
+    "weekday": "Monday",
+    "time": { "hour": 16, "minute": 0 },
+    "duration": { "hour": 1, "minute": 50 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["K3 dan Ris. Ling 02"]
+    }
+  },
+  {
+    "title": "K3 dan Ris. Ling 02",
+    "id": "K3 dan Ris. Ling 02",
+    "weekday": "Wednesday",
+    "time": { "hour": 10, "minute": 0 },
+    "duration": { "hour": 1, "minute": 50 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["K3 dan Ris. Ling 01"]
     }
   }
 ]
