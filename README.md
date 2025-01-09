@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jadwal Picker
+
+This is a NEXT.js project for picking a schedule for Semester 6 Tekkom UI.
+
+## Features
+
+- Display the schedule for Semester 6 Tekkom UI.
+- Hovering over a class will display the partner class (if any).
+- Clicking on a class will select it and disable the partner class.
+- The selected class is displayed in the table.
+- Available schedule is customizable using JSON data.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
+- Node.js (version 14 or later)
+- npm (version 6 or later)
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/EdgrantHS/ceui-tools
+   cd ceui-tools
+   ```
+
+2. Install the dependencies:
+   ```sh
+   npm install
+   ```
+
+### Running the Development Server
+
+To start the development server, run:
+
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To build the application for production, run:
 
-## Learn More
+```sh
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+To run the production build, run:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+- `app/`: Contains the Next.js pages and layout components.
+- `components/`: Contains the UI components.
+- `data/`: Contains the JSON data for schedules.
+- `lib/`: Contains utility functions.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## UI Components
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+UI components using shadcn UI library and tailwindcss.
