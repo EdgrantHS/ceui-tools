@@ -1,30 +1,72 @@
 [
   {
-    "id": "1",
     "title": "Jartel 1",
+    "id": "Jartel 1 Part 1",
     "weekday": "Monday",
     "time": { "hour": 8, "minute": 0 },
-    "duration": { "hour": 1, "minute": 40 }
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "siblingId": ["Jartel 1 Part 2"],
+      "partnerId": ["Jartel 2 Part 1", "Jartel 2 Part 2"]
+    }
   },
   {
-    "id": "1",
+    "title": "Jartel 1",
+    "id": "Jartel 1 Part 2",
+    "weekday": "Thursday",
+    "time": { "hour": 8, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "siblingId": ["Jartel 1 Part 1"],
+      "partnerId": ["Jartel 2 Part 1", "Jartel 2 Part 2"]
+    }
+  },
+  {
     "title": "Jartel 2",
+    "id": "Jartel 2 Part 1",
     "weekday": "Tuesday",
     "time": { "hour": 8, "minute": 0 },
-    "duration": { "hour": 1, "minute": 40 }
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "siblingId": ["Jartel 2 Part 2"],
+      "partnerId": ["Jartel 1 Part 1", "Jartel 1 Part 2"]
+    }
   },
   {
-    "id": "2",
-    "title": "Kemjar 1",
-    "weekday": "Wednesday",
+    "title": "Jartel 2",
+    "id": "Jartel 2 Part 2",
+    "weekday": "Friday",
     "time": { "hour": 8, "minute": 0 },
-    "duration": { "hour": 2, "minute": 30 }
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "siblingId": ["Jartel 2 Part 1"],
+      "partnerId": ["Jartel 1 Part 1", "Jartel 1 Part 2"]
+    }
   },
   {
+    "title": "Kemjar 1",
     "id": "2",
+    "weekday": "Wednesday",
+    "time": { "hour": 10, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "partnerId": ["Kemjar 2"]
+    }
+  },
+  {
     "title": "Kemjar 2",
+    "id": "2",
     "weekday": "Wednesday",
     "time": { "hour": 13, "minute": 0 },
-    "duration": { "hour": 2, "minute": 30 }
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "partnerId": ["Kemjar 1"]
+    }
   }
 ]
