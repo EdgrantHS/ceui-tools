@@ -182,19 +182,6 @@
     }
   },
   {
-    "title": "Allin Lanjut 02 (Harusnya jam 10)",
-    "id": "Allin Lanjut 02",
-    "weekday": "Thursday",
-    "time": { "hour": 12, "minute": 0 },
-    "duration": { "hour": 1, "minute": 40 },
-    "meta": {
-      "active": true,
-      "selected": false,
-      "partnerHovered": false,
-      "partnerId": ["Allin Lanjut 01"]
-    }
-  },
-  {
     "title": "Analisis Algoritm 02 (Harusnya jam 13)",
     "id": "Analisis Algoritm 02",
     "weekday": "Monday",

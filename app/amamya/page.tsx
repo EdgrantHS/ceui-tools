@@ -68,8 +68,8 @@ export default function Schedule() {
   return (
     <Card className="container mx-auto max-w-screen-xl">
       <CardHeader>
-        <CardTitle>Weeks</CardTitle>
-        <CardDescription>Weeks Description</CardDescription>
+        <CardTitle>Amamiya</CardTitle>
+        <CardDescription>Amamiya Kokoro my Oshi</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex justify-between overflow-x-auto">
