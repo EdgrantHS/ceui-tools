@@ -232,5 +232,31 @@
       "partnerHovered": false,
       "partnerId": ["K4-01,02"]
     }
+  },
+  {
+    "title": "Komputasi Numerik 01 (Harusnya jam 10)",
+    "id": "Komputasi Numerik 01",
+    "weekday": "Thursday",
+    "time": { "hour": 11, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Komputasi Numerik 02"]
+    }
+  },
+  {
+    "title": "Komputasi Numerik 02",
+    "id": "Komputasi Numerik 02",
+    "weekday": "Monday",
+    "time": { "hour": 13, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Komputasi Numerik 01"]
+    }
   }
 ]
