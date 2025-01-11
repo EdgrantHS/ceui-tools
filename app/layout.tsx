@@ -15,7 +15,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Jadwal Picker",
-  description: "Jadwal Picker untuk Sem 6 Tekkom UI",
+  description: "Jadwal Picker untuk Tekkom UI",
 };
 
 export default function RootLayout({

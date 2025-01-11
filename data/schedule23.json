@@ -1,0 +1,223 @@
+[
+  {
+    "title": "Desain&Manaj Jar 01",
+    "id": "Desain&Manaj Jar 01 1",
+    "weekday": "Wednesday",
+    "time": { "hour": 8, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Desain&Manaj Jar 02 1"]
+    }
+  },
+  {
+    "title": "Desain&Manaj Jar 02",
+    "id": "Desain&Manaj Jar 02 1",
+    "weekday": "Thursday",
+    "time": { "hour": 10, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Desain&Manaj Jar 01 1"]
+    }
+  },
+  {
+    "title": "Komputasi Numerik 01 (Harusnya jam 10)",
+    "id": "Komputasi Numerik 01",
+    "weekday": "Thursday",
+    "time": { "hour": 11, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Komputasi Numerik 02"]
+    }
+  },
+  {
+    "title": "Komputasi Numerik 02",
+    "id": "Komputasi Numerik 02",
+    "weekday": "Monday",
+    "time": { "hour": 13, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Komputasi Numerik 01"]
+    }
+  },
+  {
+    "title": "Matematika Lanjut-01",
+    "id": "Matematika Lanjut-01 1",
+    "weekday": "Tuesday",
+    "time": { "hour": 10, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Matematika Lanjut-02 1"]
+    }
+  },
+  {
+    "title": "Matematika Lanjut-01",
+    "id": "Matematika Lanjut-01 2",
+    "weekday": "Thursday",
+    "time": { "hour": 16, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Matematika Lanjut-02 2"]
+    }
+  },
+  {
+    "title": "Matematika Lanjut-02",
+    "id": "Matematika Lanjut-02 1",
+    "weekday": "Tuesday",
+    "time": { "hour": 13, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Matematika Lanjut-01 1"]
+    }
+  },
+  {
+    "title": "Matematika Lanjut-02",
+    "id": "Matematika Lanjut-02 2",
+    "weekday": "Wednesday",
+    "time": { "hour": 13, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Matematika Lanjut-01 2"]
+    }
+  },
+  {
+    "title": "Sist Basis Data 01",
+    "id": "Sist Basis Data 01",
+    "weekday": "Thursday",
+    "time": { "hour": 13, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Sist Basis Data 02"]
+    }
+  },
+  {
+    "title": "Sist Basis Data 02",
+    "id": "Sist Basis Data 02",
+    "weekday": "Thursday",
+    "time": { "hour": 7, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Sist Basis Data 01"]
+    }
+  },
+  {
+    "title": "Sistem Embedded 01",
+    "id": "Sistem Embedded 01",
+    "weekday": "Tuesday",
+    "time": { "hour": 7, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Sistem Embedded 02"]
+    }
+  },
+  {
+    "title": "Sistem Embedded 02",
+    "id": "Sistem Embedded 02",
+    "weekday": "Monday",
+    "time": { "hour": 16, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Sistem Embedded 01"]
+    }
+  },
+  {
+    "title": "Sistem Operasi+P 01",
+    "id": "Sistem Operasi+P 01",
+    "weekday": "Friday",
+    "time": { "hour": 8, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Sistem Operasi+P 02"]
+    }
+  },
+  {
+    "title": "Sistem Operasi+P 02",
+    "id": "Sistem Operasi+P 02",
+    "weekday": "Friday",
+    "time": { "hour": 13, "minute": 0 },
+    "duration": { "hour": 2, "minute": 30 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Sistem Operasi+P 01"]
+    }
+  },
+  {
+    "title": "Allin Lanjut 02 (Harusnya jam 10)",
+    "id": "Allin Lanjut 02",
+    "weekday": "Thursday",
+    "time": { "hour": 12, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Allin Lanjut 01"]
+    }
+  },
+  {
+    "title": "Analisis Algoritm 02 (Harusnya jam 13)",
+    "id": "Analisis Algoritm 02",
+    "weekday": "Monday",
+    "time": { "hour": 14, "minute": 0 },
+    "duration": { "hour": 1, "minute": 40 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["Analisis Algoritm 01"]
+    }
+  },
+  {
+    "title": "Aljut sama Algor di siak gak jelas jadi di sini belum dimasukin pasangannya",
+    "id": "Amamya",
+    "weekday": "Saturday",
+    "time": { "hour": 12, "minute": 0 },
+    "duration": { "hour": 4, "minute": 0 },
+    "meta": {
+      "active": true,
+      "selected": false,
+      "partnerHovered": false,
+      "partnerId": ["isiini"]
+    }
+  }
+]

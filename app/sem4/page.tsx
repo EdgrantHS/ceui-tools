@@ -2,7 +2,7 @@
 
 import { Weekday, ClassMeta, ScheduleTime } from "@/types/schedule";
 import Week from "../schedule/Week";
-import scheduleData from "@/data/schedulemya.json";
+import scheduleData from "@/data/schedule23.json";
 
 import {
   Card,
