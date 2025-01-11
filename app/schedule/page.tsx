@@ -70,7 +70,9 @@ export default function Schedule() {
       <CardHeader>
         <CardTitle>Semester 6</CardTitle>
         <CardDescription>
-          Pemilihan jadwal untuk semster 6 tekkom UI
+          Pemilihan jadwal untuk semster 6 tekkom UI Source code di sini, kalian
+          sangat dipersilahkan untuk PR, fork, atau buatin JSON terus DM Edgrant
+          https://github.com/EdgrantHS/ceui-tools.
         </CardDescription>
       </CardHeader>
       <CardContent>
